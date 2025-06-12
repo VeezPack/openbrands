@@ -1,119 +1,283 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Licence Open Brands v0.2</title>
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      font-size: 16px;
-      line-height: 1.7;
-      color: #1a1a1a;
-      max-width: 740px;
-      margin: 6rem auto 4rem auto;
-      padding: 0 1rem;
-      text-align: left;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Brands - Licence v0.2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    h2 {
-      font-size: 1.8rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
+        :root {
+            --text-primary: #1a1a1a;
+            --text-secondary: #666666;
+            --text-accent: #000000;
+            --background: #ffffff;
+            --border: #e5e5e5;
+            --highlight: #fafafa;
+            --green: #22c55e;
+        }
 
-    h3 {
-      font-size: 1.3rem;
-      font-weight: 600;
-      margin-top: 2rem;
-      margin-bottom: 0.6rem;
-    }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text-primary: #ffffff;
+                --text-secondary: #a0a0a0;
+                --text-accent: #ffffff;
+                --background: #0a0a0a;
+                --border: #333333;
+                --highlight: #1a1a1a;
+                --green: #22c55e;
+            }
+        }
 
-    p {
-      margin-bottom: 1.2rem;
-    }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--background);
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
 
-    ul {
-      padding-left: 1.4rem;
-      margin-bottom: 1.2rem;
-    }
+        .header {
+            margin-bottom: 4rem;
+        }
 
-    li {
-      margin-bottom: 0.4rem;
-    }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
 
-    strong {
-      font-weight: 600;
-    }
+        .logo-img {
+            height: 48px;
+            flex-shrink: 0;
+        }
 
-    .footer {
-      margin-top: 4rem;
-      font-size: 0.9rem;
-      color: #555;
-      text-align: left;
-    }
-  </style>
+        .tagline {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+            line-height: 1.5;
+            max-width: 600px;
+        }
+
+        .version {
+            display: inline-block;
+            padding: 0.5rem 1.2rem;
+            background: var(--highlight);
+            border: 1px solid var(--border);
+            border-radius: 2rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            font-weight: 400;
+            margin-top: 1rem;
+        }
+
+        .content {
+            margin-bottom: 4rem;
+        }
+
+        .preambule {
+            background: var(--highlight);
+            padding: 2.5rem;
+            border-radius: 8px;
+            margin-bottom: 3rem;
+            border-left: 4px solid var(--text-accent);
+        }
+
+        .preambule h2 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+            color: var(--text-accent);
+        }
+
+        .license-text {
+            margin-bottom: 3rem;
+        }
+
+        .license-text h2 {
+            font-size: 1.75rem;
+            font-weight: 400;
+            margin: 2.5rem 0 1.5rem 0;
+            color: var(--text-accent);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.75rem;
+        }
+
+        .license-text h3 {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin: 2rem 0 1rem 0;
+            color: var(--text-primary);
+        }
+
+        .license-text p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .license-text ul {
+            margin: 1rem 0 1rem 2rem;
+        }
+
+        .license-text li {
+            margin-bottom: 0.5rem;
+        }
+
+        .license-text strong {
+            color: var(--text-accent);
+            font-weight: 500;
+        }
+
+        .separator {
+            text-align: center;
+            margin: 3rem 0;
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+        }
+
+        .footer {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            color: var(--text-secondary);
+        }
+
+        .signature {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .meta {
+            font-style: italic;
+            font-size: 0.95rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 2rem 1rem;
+                font-size: 16px;
+            }
+
+            .logo-img {
+                height: 40px;
+            }
+
+            .preambule {
+                padding: 1.5rem;
+            }
+
+            .license-text h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Animation douce pour les transitions */
+        * {
+            transition: color 0.3s ease;
+        }
+    </style>
 </head>
 <body>
+    <header class="header">
+        <div class="logo-container">
+            <img src="openbrands_logo.png" alt="Open Brands" class="logo-img" />
+        </div>
+        <p class="tagline">Libérer le potentiel créatif des marques à l'ère de l'IA générative</p>
+        <div class="version">Version 0.2</div>
+    </header>
 
-<h2>Préambule</h2>
-<p>
-La présente licence établit un cadre juridique permettant aux titulaires de marques de mettre volontairement à disposition certains éléments identitaires à des fins d’usage, de transformation et de diffusion.
-</p>
-<p>
-Elle repose sur un principe de délégation partielle, explicite et réversible de droits d’usage, dans le but de favoriser l’expérimentation, l’innovation et la compatibilité avec les nouveaux usages liés aux technologies génératives.
-</p>
-<p>
-Cette licence ne constitue ni un abandon de droits, ni une renonciation à la titularité. Elle encadre des usages autorisés, tout en protégeant les intérêts légitimes des marques concernées.
-</p>
-<p>
-Elle peut être utilisée par toute personne ou entité souhaitant publier des éléments de marque sous un régime d’ouverture encadrée.
-</p>
-<p><strong>Cette licence est conçue pour durer, même lorsque les usages évoluent.</strong></p>
+    <main class="content">
+        <section class="preambule">
+            <h2>Préambule</h2>
+            <p>À l'heure où les technologies génératives redéfinissent la création, les marques font face à un choix décisif : subir cette transformation ou la façonner.</p>
+            
+            <p>La présente licence établit un cadre juridique inédit permettant aux titulaires de marques de mettre volontairement à disposition certains éléments identitaires à des fins d'usage, de transformation et de diffusion. Elle pose les fondations d'un écosystème créatif où l'innovation et la propriété intellectuelle ne s'opposent plus, mais se nourrissent mutuellement.</p>
+            
+            <p>Cette licence repose sur un principe de <strong>délégation partielle, explicite et réversible</strong> de droits d'usage. Elle vise à favoriser l'expérimentation, l'innovation et la compatibilité avec les nouveaux paradigmes de création, notamment ceux liés aux systèmes génératifs.</p>
+            
+            <p><strong>Cette licence ne constitue ni un abandon de droits, ni une renonciation à la titularité.</strong> Elle dessine un territoire d'usages autorisés, tout en préservant les intérêts légitimes et la valeur patrimoniale des marques concernées.</p>
+            
+            <p>Elle peut être adoptée par toute personne physique ou morale souhaitant placer des éléments de marque sous un régime d'ouverture maîtrisée.</p>
+            
+            <p><strong>Cette licence est conçue pour traverser les évolutions technologiques et perdurer au-delà des usages d'aujourd'hui.</strong></p>
+        </section>
 
-<h2>Licence Open Brands v0.2</h2>
+        <div class="separator">❋ ❋ ❋</div>
 
-<h3>Article 1 — Objet</h3>
-<p>
-Autoriser la création, l’usage et la diffusion d’œuvres dérivées à partir d’éléments d’une marque, y compris par des systèmes génératifs (IA, 3D, etc.), dans un cadre ouvert, éthique, et bénéfique pour l’écosystème.
-</p>
+        <section class="preambule">
+            <h2>Qui suis-je ?</h2>
+            <p>Je suis Julien Lefevre, producteur 3D/VFX depuis 20 ans. J'ai automatisé entièrement la création de jumeaux numériques et développé des solutions d'IA générative propriétaires. <strong>Mais cette maîtrise technique se heurte à un mur juridique : l'impossibilité d'utiliser de vraies marques pour démontrer le potentiel de ces technologies. C'est exactement le problème que vit toute l'industrie de l'IA générative aujourd'hui.</strong></p>
+            
+            <h2 style="margin-top: 2rem;">Pourquoi Open Brands doit exister</h2>
+            <p>Je considère comme une règle d'or que si la technologie peut libérer la créativité, elle ne doit pas être entravée par des barrières artificielles. Les marques possèdent un potentiel créatif immense, mais restent prisonnières de cadres juridiques qui les empêchent de le révéler.</p>
+            
+            <p><strong>Cette licence existe pour briser ce verrou et permettre enfin à l'innovation de s'exprimer librement.</strong></p>
+        </section>
 
-<h3>Article 2 — Droits concédés</h3>
-<p>La marque concède à tout utilisateur les droits non exclusifs suivants :</p>
-<ul>
-  <li><strong>Reproduire</strong> tout ou partie des éléments identitaires déposés ;</li>
-  <li><strong>Adapter ou transformer</strong> ces éléments librement, y compris par l’usage d’outils génératifs ou d’entraînement IA ;</li>
-  <li><strong>Diffuser</strong> ou commercialiser librement les contenus dérivés, y compris à titre onéreux.</li>
-</ul>
+        <div class="separator">❋ ❋ ❋</div>
 
-<h3>Article 3 — Limites</h3>
-<ul>
-  <li>Cette licence <strong>n’implique aucun lien officiel</strong> avec la marque, sauf mention explicite par celle-ci ;</li>
-  <li>Elle <strong>n’autorise pas le dépôt juridique</strong> d’un dérivé comme marque ou modèle exclusif ;</li>
-  <li>Elle <strong>interdit les usages malveillants</strong>, haineux, mensongers ou contraires à la loi.</li>
-</ul>
+        <section class="license-text">
+            <h2>Licence Open Brands v0.2</h2>
 
-<h3>Article 4 — Réversibilité</h3>
-<p>
-La marque peut retirer à tout moment ses éléments de la plateforme. Ce retrait :
-</p>
-<ul>
-  <li>Est <strong>immédiat pour les nouvelles créations</strong> ;</li>
-  <li>N’a <strong>pas d’effet rétroactif</strong> sur les créations existantes.</li>
-</ul>
+            <h3>Article 1 — Objet et finalité</h3>
+            <p>La présente licence a pour objet d'autoriser la création, l'usage et la diffusion d'œuvres dérivées à partir d'éléments identitaires d'une marque, y compris par le recours à des systèmes génératifs (intelligence artificielle, modélisation 3D, synthèse algorithmique), dans un cadre ouvert, éthique et mutuellement bénéfique.</p>
+            <p>Elle vise à libérer le potentiel créatif tout en respectant l'intégrité et la valeur des marques.</p>
 
-<h3>Article 5 — Durée et validité</h3>
-<p>
-Tant qu’un élément est publié avec la mention de cette licence, les droits sont valables pour une durée indéterminée. La marque conserve l’entière propriété intellectuelle de ses éléments originaux.
-</p>
+            <h3>Article 2 — Droits concédés</h3>
+            <p>Par l'adoption de cette licence, la marque concède à tout utilisateur, sans distinction ni condition préalable, les droits non exclusifs, irrévocables et mondiaux suivants :</p>
+            <ul>
+                <li><strong>Reproduire</strong> tout ou partie des éléments identitaires mis à disposition ;</li>
+                <li><strong>Adapter, transformer ou dériver</strong> ces éléments librement, y compris par l'usage d'outils génératifs, d'entraînement d'intelligence artificielle ou de toute technologie émergente ;</li>
+                <li><strong>Diffuser, communiquer ou commercialiser</strong> les contenus dérivés, y compris à titre onéreux, sur tout support et par tout moyen.</li>
+            </ul>
 
-<h3>Article 6 — Liberté d’usage</h3>
-<p>
-Aucune mention obligatoire, aucun lien, aucune validation préalable ne sont requis pour exploiter les éléments déposés sous cette licence. <strong>L’objectif est de favoriser la circulation créative, sans friction ni permission préalable.</strong>
-</p>
+            <h3>Article 3 — Limitations et interdictions</h3>
+            <p>Cette licence s'accompagne des limitations suivantes :</p>
+            <ul>
+                <li>Elle <strong>n'implique aucun lien officiel, partenariat ou caution</strong> avec la marque originale, sauf mention explicite et formelle de celle-ci ;</li>
+                <li>Elle <strong>n'autorise pas l'appropriation exclusive</strong> des éléments dérivés par le dépôt de marques, modèles, brevets ou tout autre titre de propriété intellectuelle ;</li>
+                <li>Elle <strong>prohibe formellement</strong> les usages malveillants, diffamatoires, haineux, trompeurs ou contraires aux lois en vigueur.</li>
+            </ul>
 
-<div class="footer">
-  Version 0.2 — Publiée le 12 juin 2025
-</div>
+            <h3>Article 4 — Réversibilité et retrait</h3>
+            <p>La marque conserve la faculté de retirer à tout moment ses éléments de toute plateforme ou support de diffusion. Ce retrait produit les effets suivants :</p>
+            <ul>
+                <li><strong>Effet immédiat</strong> : interdiction de créer de nouvelles œuvres dérivées à compter du retrait ;</li>
+                <li><strong>Maintien des droits acquis</strong> : les créations existantes demeurent valides et exploitables selon les termes initiaux de la licence.</li>
+            </ul>
 
+            <h3>Article 5 — Durée et propriété</h3>
+            <p>Tant qu'un élément demeure publié avec la mention de cette licence, les droits concédés restent valables pour une durée indéterminée.</p>
+            <p><strong>La marque conserve l'intégralité de ses droits de propriété intellectuelle</strong> sur les éléments originaux. Cette licence constitue une autorisation d'usage, non une cession de droits.</p>
+
+            <h3>Article 6 — Principe de liberté maximale</h3>
+            <p>Dans l'esprit de cette licence, <strong>aucune mention obligatoire, aucun lien de référence, aucune validation préalable ne sont requis</strong> pour exploiter les éléments mis à disposition.</p>
+            <p><strong>L'objectif fondamental est de favoriser la circulation créative et l'innovation, en éliminant toute friction administrative ou technique susceptible d'entraver la création.</strong></p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="signature">
+            <strong>Licence Open Brands v0.2</strong><br>
+            Julien Lefevre, 12 juin 2025
+        </div>
+        <p class="meta">
+            Cette licence peut être librement utilisée et redistribuée.<br>
+            Elle est elle-même un bien commun au service de l'innovation.
+        </p>
+    </footer>
 </body>
 </html>
