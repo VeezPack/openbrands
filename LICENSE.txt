@@ -1,0 +1,18 @@
+Open Brands License v0.2
+
+Copyright (c) 2025 Julien Lefevre
+
+La présente licence permet aux titulaires de marques de mettre volontairement à disposition certains éléments identitaires (nom, logo, visuels, packaging, etc.) à des fins d’usage, de transformation, de génération et de diffusion, y compris à des fins commerciales.
+
+Les droits concédés sont non exclusifs, mondiaux, irrévocables tant que les éléments restent publiés sous cette licence, et comprennent notamment :
+- la reproduction et la diffusion ;
+- l’adaptation, y compris par des technologies génératives (IA, 3D, etc.) ;
+- la publication de contenus dérivés sans mention obligatoire.
+
+Cette licence n’implique aucun lien officiel avec la marque concernée, et n’autorise pas l’appropriation exclusive des dérivés. Elle peut être retirée à tout moment pour les usages futurs, sans effet rétroactif.
+
+Pour la version complète de la licence et les dernières mises à jour :
+https://openbrands.org
+
+Version : OBL-0.2  
+Date de publication : 12 juin 2025
